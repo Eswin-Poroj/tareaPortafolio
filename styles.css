@@ -11,7 +11,6 @@ body {
 }
 
 header {
-    
     position: fixed;
     top: 0;
     left: 0;
@@ -27,12 +26,30 @@ header {
 
 header h1 {
     font-size: 2em;
-    margin-left: 10px;      
+    margin-left: 10px;
 }
 
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.navbar-toggle span {
+    background: white;
+    height: 2px;
+    width: 25px;
+    border-radius: 1px;
+}
+
+/* Navbar */
 header nav ul {
     list-style: none;
     margin: 10px 10px;
+    display: flex;
 }
 
 header nav ul li {
@@ -51,6 +68,8 @@ header nav ul li a {
     text-decoration: none;
 }
 
+
+
 .redesNavBar {
     display: flex;
     justify-content: space-around;
@@ -59,7 +78,7 @@ header nav ul li a {
 }
 
 .redesNavBar a:hover {
-    background-color: #5a3f3f;
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
     padding: 5px;
 }
@@ -167,28 +186,32 @@ footer {
 
 
 @media(max-width:950px) {
-    .header {
-        display: initial;
-        padding: 20px 10px;
+    header {
+        padding-top: 25px;
+    }
+    .navbar-toggle {
+        display: flex;
+        margin-left: 10px;
     }
 
-    .header nav {
-        position: fixed;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: rgba(1, 1, 1, 0.7);
+    .main-nav {
         display: none;
-    }
-
-    .header nav ul li,
-    .header nav ul li a {
+        flex-direction: column;
         width: 100%;
+        text-align: center;
     }
 
-    .header nav ul li a {
-        position: relative;
-        left: 0;
+    .main-nav.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header nav ul li:hover {
+        background-color: transparent;
     }
     
     #toggle:checked ~ nav {
@@ -205,7 +228,7 @@ footer {
     }
 
     .inicio img {
-        margin-top: 28%;
+        margin-top: 24%;
     }
 
     .acerca,
