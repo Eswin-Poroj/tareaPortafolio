@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portafolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,12 +9,6 @@
     <body>
         <header>
             <h1>Mi Portafolio</h1>
-            <input type="checkbox" name="toggle" id="toggle">
-            <label for="toggle" class="navbar-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
             <nav>
                 <ul class="main-nav">
                     <li><a href="#inicio">Inicio</a></li>
@@ -35,6 +22,12 @@
                 <a href="https://github.com/Eswin-Poroj" target="_blank"><img src="images/githun-logo.png" alt="github logo" width="30px" height="30px"></a>
                 <a href="https://www.linkedin.com/in/eswin-stuard-poroj-castro/" target="_blank"><img src="images//logo-black/linkedin-logo.jpg" alt="logo linkedin" width="30px" height="30px"></a>
             </div>
+            <input type="checkbox" name="toggle" id="toggle">
+            <label for="toggle" class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <script src="script.js"></script>
         </header>
     <section id="inicio" class="inicio">
@@ -48,11 +41,22 @@
                     <p>Mi nombre es Eswin Stuard, tengo 20 años y soy de Santa María Chiquimula, Totonicapán. Me gusta mucho la programación y el desarrollo. </p>
                     <p>Estoy aprendiendo a programar en diferentes lenguajes de programación y a diseñar páginas web. Tambien, estoy aprendiendo sobre Desarrollo Móvil con Flutter y Dart</p>
                     <p>Soy un estudiante de Ingenieria en Sistemas y Ciencias de la Computación en la Universidad Mariano Gálvez de Quetzaltenango</p>
+                    <p>Actualmente estoy en el tercer semestre de mi carrera universitaria. Pero, además de eso, estoy estudiando Desarrollo Web y Desarrollo Móvil comó lo mencione antes. Estás dos ultimas dos carreras las estoy sacando en una institución llamada <a href="https://intecap.edu.gt/" target="_blank">Intecap</a> con sede en Quetzaltenango.</p>
+                    <p>Actualmente no cuento con experiencia laboral, pero sí con experiencia en proyectos. Varios de estos proyectos, son tareas de la Universidad y de Intecap. Toda está experiencia la encuentras en mi cuenta de
+                        <a href="https://github.com/Eswin-Poroj" target="_blank">GitHub</a>.</p>
         </section>
         <h2>Contacto</h2>
         <section class="contacto" id="contacto">
-            <p>Me puedes seguir en mis redes sociales</p>
-            
+            <p>Si deseas ponerte en contacto conmigo, puedes hacerlo a través de este formulario</p>
+            <form action="enviar.php" method="post">
+                <label for="nombre" class="labelForm">Nombre:</label><br>
+                <input type="text" name="nombre" id="nombre" required class="input-form"><br>
+                <label for="correo" class="labelForm">Correo:</label><br>
+                <input type="email" name="correo" id="correo" required class="input-form"><br>
+                <label for="mensaje" class="labelForm">Mensaje:</label><br>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="input-form"></textarea><br>
+                <input type="submit" value="Enviar" class="btn-enviar">
+            </form>
         </section>
     </div>  
     <footer>
@@ -67,6 +71,5 @@
             <a href="https://www.linkedin.com/in/eswin-stuard-poroj-castro/" target="_blank"><img src="images/logo-linkedln.png" alt="logo linkedin" width="30px" height="30px"></a>
         </div>
     </footer>
-
 </body>
 </html>

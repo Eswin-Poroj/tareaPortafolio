@@ -3,9 +3,14 @@ document.getElementById('toggle').addEventListener('change', function() {
     menu.classList.toggle('active');
 });
 
-window.addEventListener('scroll', (e) => {
-    if (e.target.scrollingElement.scrollTop > 100) {
-        document.querySelector('.main-nav').classList.add('scroll');
-        
+window.addEventListener('click', function(e) {
+    var menu = document.querySelector('.main-nav');
+    if (e.target != menu && e.target != document.querySelector('.toggle')) {
+        menu.classList.remove('active');
     }
+});
+
+window.addEventListener('scroll', function() {
+    var menu = document.querySelector('.main-nav');
+    menu.classList.remove('active');
 });
